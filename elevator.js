@@ -1,4 +1,5 @@
 class Elevator {
+  id = null;
   _direction = "up";
   _floors = [];
   _currentFloor = 0;
@@ -91,7 +92,7 @@ class Elevator {
       passedFloors: [this.currentFloor],
       done: false
     });
-
+    console.log(`elevator with id ${this.id} goes to floor ${floor}`);
     this.currentFloor = floor;
     if (this.currentFloor == this.floors[this.floors.length - 1])
       this.direction = "down";
@@ -99,13 +100,5 @@ class Elevator {
     if (this.currentFloor == this.floors[0]) this.direction = "up";
   };
 }
-
-const elevator = new Elevator({
-  floors: [0, 1, 2, 3, 4, 5, 6],
-  currentFloor: 6
-});
-elevator.goToFloor(2);
-// elevator.direction = "down";
-console.log(elevator);
 
 module.exports = Elevator;
