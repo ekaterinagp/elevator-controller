@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "jest --watchAll --notify=true"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "babel-jest": "^25.2.4",
+    "babel-polyfill": "^6.26.0",
+    "jest": "^25.2.4"
+  }
+}
