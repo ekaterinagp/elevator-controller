@@ -91,8 +91,12 @@ class Elevator {
       passedFloors: [this.currentFloor],
       done: false
     });
-    // console.log("passed floors", this.passedFloors);
+
     this.currentFloor = floor;
+    if (this.currentFloor == this.floors[this.floors.length - 1])
+      this.direction = "down";
+
+    if (this.currentFloor == this.floors[0]) this.direction = "up";
   };
 }
 

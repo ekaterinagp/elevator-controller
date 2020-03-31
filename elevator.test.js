@@ -52,3 +52,10 @@ test("expect goToFloor change direction and floor number", () => {
   expect(elevator.direction).toBe("down");
   expect(elevator.passedFloors).toStrictEqual([6, 5, 4, 3, 2]);
 });
+
+test("expect elevator to change direction when reaches the top floor", () => {
+  const elevator = new Elevator({ floors: [0, 1, 2, 3, 4, 5, 6] });
+  elevator.currentFloor = 2;
+  elevator.goToFloor(0);
+  expect(elevator.direction).toBe("up");
+});
